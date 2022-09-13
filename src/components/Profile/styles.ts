@@ -5,12 +5,12 @@ export const ContainerProfile = styled.div`
   display: flex;
   flex-direction: column;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  color: ${colors.gray100};
+  color: ${colors.colorFont};
   width: 300px;
   height: 260px;
   justify-content: center;
   align-items: center;
-  background: ${colors.gray200};
+  background: ${colors.backgroundPrimary};
   border-radius: 20px;
 `;
 
@@ -22,7 +22,7 @@ export const Picture = styled.div<UrlImage>(({url}) =>`
   width: 120px;
   height: 120px;
   border-radius: 124px;
-  border: 2px solid ${colors.gray100};
+  border: 2px solid ${colors.colorFont};
   background-image: url('${url}');
   background-size: cover;
 `);

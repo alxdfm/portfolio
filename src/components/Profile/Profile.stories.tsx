@@ -1,4 +1,4 @@
-
+import React from "react";
 import Profile from ".";
 import { Props } from "./Profile";
 
