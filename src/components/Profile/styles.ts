@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { colors } from '../../variables';
+import { colors, fontFamily, fontSize } from '../../variables';
 
 export const ContainerProfile = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  color: ${colors.colorFont};
-  width: 300px;
-  height: 260px;
   justify-content: center;
   align-items: center;
+  width: 300px;
+  height: 260px;
+  font-family: ${fontFamily.default};
+  color: ${colors.colorFont};
   background: ${colors.backgroundPrimary};
   border-radius: 20px;
 `;
@@ -29,7 +29,7 @@ export const Picture = styled.div<UrlImage>(({url}) =>`
 
 export const Name = styled.h1`
   font-weight: 700;
-  font-size: 20px;
+  font-size: ${fontSize.default};
 `;
 
 export const Description = styled.p`
