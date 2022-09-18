@@ -10,7 +10,7 @@ import Work from "./assets/Work";
 export type Link = {
 	image: ReactNode,
   description: string,
-  url: string,
+  url?: string,
 }
 
 const linksDataDefault: Array<Link> = [
