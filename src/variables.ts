@@ -1,6 +1,7 @@
 export const colors = {
   backgroundPrimary: '#22212C',
   backgroundSecondary: '#302F3D',
+  highlightColor: '#008080',
 	colorFont: '#B6AEAF',
 }
 

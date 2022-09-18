@@ -22,7 +22,7 @@ export const Picture = styled.div<UrlImage>(({url}) =>`
   width: 120px;
   height: 120px;
   border-radius: 124px;
-  border: 2px solid ${colors.colorFont};
+  border: 4px solid ${colors.highlightColor};
   background-image: url('${url}');
   background-size: cover;
 `);
