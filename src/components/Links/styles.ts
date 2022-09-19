@@ -1,18 +1,6 @@
 import styled from 'styled-components';
 import { colors, fontFamily, fontSize } from '../../variables';
 
-export const ContainerLinks = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-family: ${fontFamily.default};
-  font-size: ${fontSize.small};
-  width: 300px;
-  height: 240px;
-  border-radius: 20px;
-  background-color: ${colors.backgroundPrimary};
-  padding: 20px;
-`;
-
 export const LinkContainer = styled.a`
   display: flex;
   flex-direction: row;

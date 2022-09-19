@@ -1,19 +1,6 @@
 import styled from 'styled-components';
 import { colors, fontFamily, fontSize } from '../../variables';
 
-export const ContainerProfile = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 260px;
-  font-family: ${fontFamily.default};
-  color: ${colors.colorFont};
-  background: ${colors.backgroundPrimary};
-  border-radius: 20px;
-`;
-
 type UrlImage = {
   url: string
 }

@@ -1,24 +1,6 @@
 import styled from "styled-components";
 import { colors, fontFamily, fontSize } from "../../variables";
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-family: ${fontFamily.default};
-  width: 300px;
-  height: auto;
-  border-radius: 20px;
-  background-color: ${colors.backgroundPrimary};
-  padding: 20px;
-`;
-
-export const Title = styled.h2`
-  font-weight: 700;
-  font-size: ${fontSize.large};
-  color: ${colors.colorFont};
-  margin: 0 0 20px 0;
-`;
-
 export const TechTagsContainer = styled.div`
   display: flex;
   width: 100%;
@@ -36,7 +18,7 @@ export const TechTags = styled.h3`
   text-align: center;
   color: ${colors.backgroundPrimary};
   font-size: ${fontSize.small};
-  font-weight: 400;
+  font-weight: bold;
   background-color: ${colors.highlightColor};
   border: 1px solid ${colors.colorFont};
   border-radius: 16px;
