@@ -1,11 +1,12 @@
 import React, { ReactNode } from "react";
-import { ContainerLinks, LinkContainer, Image, Description} from "./styles";
+import { LinkContainer, Image, Description} from "./styles";
 import Github from "./assets/Github";
 import Linkedin from "./assets/Linkedin";
 import Mail from "./assets/Mail";
 import Mapin from "./assets/Mapin";
 import Twitter from "./assets/Twitter";
 import Work from "./assets/Work";
+import { Container } from "../styles";
 
 export type Link = {
 	image: ReactNode,
@@ -60,9 +61,9 @@ const Links = (linksData: Array<Link> ) => {
   }
 
   return (
-		<ContainerLinks>
+		<Container>
       {Array.isArray(linksData) ? renderLinks(linksData) : renderLinks(linksDataDefault)}
-		</ContainerLinks>
+		</Container>
 	)
 }
 

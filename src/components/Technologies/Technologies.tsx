@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Title, TechTags, TechTagsContainer } from "./styles";
+import { TechTags, TechTagsContainer } from "./styles";
+import { Container, Title } from "../styles";
 
 export type Props = {
   title?: string,
