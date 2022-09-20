@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
 import { LinkContainer, Image, Description} from "./styles";
+import { Container } from "../styles";
 import Github from "./assets/Github";
 import Linkedin from "./assets/Linkedin";
 import Mail from "./assets/Mail";
 import Mapin from "./assets/Mapin";
 import Twitter from "./assets/Twitter";
 import Work from "./assets/Work";
-import { Container } from "../styles";
 
 export type Link = {
 	image: ReactNode,
