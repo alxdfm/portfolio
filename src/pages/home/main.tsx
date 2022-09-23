@@ -12,42 +12,9 @@ import Work from "../../components/Links/assets/Work";
 import Profile from "../../components/Profile";
 import Technologies from "../../components/Technologies";
 
-import { Link } from "../../components/Links/Links";
+import { linksDataDefault } from "../../components/Links/Links";
 
 import { ScreenContainer, SideContent } from "./styles";
-
-const linksDataDefault: Array<Link> = [
-  {
-    image: <Mapin />,
-    description: "Esteio, RS",
-    url: "",
-  },
-  {
-    image: <Work />,
-    description: "Descomplica",
-    url: "https://descomplica.com.br/",
-  },
-  {
-    image: <Github />,
-    description: "alxdfm",
-    url: "https://github.com/alxdfm/",
-  },
-  {
-    image: <Linkedin />,
-    description: "alxdfm",
-    url: "https://www.linkedin.com/in/alxdfm/",
-  },
-  {
-    image: <Twitter />,
-    description: "alxdfm",
-    url: "https://twitter.com/alxdfm/",
-  },
-  {
-    image: <Mail />,
-    description: "alexandre.fragamachado@gmail.com",
-    url: "mailto:alexandre.fragamachado@gmail.com",
-  },
-];
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

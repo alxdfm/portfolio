@@ -14,7 +14,7 @@ export type Link = {
   url?: string,
 }
 
-const linksDataDefault: Array<Link> = [
+export const linksDataDefault: Array<Link> = [
   {
     image: <Mapin />,
     description: "Esteio, RS",
