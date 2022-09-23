@@ -51,7 +51,7 @@ const Links = (linksData: Array<Link> ) => {
 
   const renderLinks = (arrayLinks: Array<Link>) => {
     return arrayLinks.map((link, index) => (
-      <LinkContainer key={index} href={link.url}>
+      <LinkContainer key={index} href={link.url} target={'_blank'}>
         <Image>
           {link.image}
         </Image>
