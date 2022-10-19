@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, fontFamily, fontSize } from '../../variables';
+import { colors } from '../../variables';
 
 export const LinkContainer = styled.a`
   display: flex;

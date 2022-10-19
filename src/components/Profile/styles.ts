@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, fontFamily, fontSize } from '../../variables';
+import { colors, fontSize } from '../../variables';
 
 type UrlImage = {
   url: string
