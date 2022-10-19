@@ -22,7 +22,7 @@ export default {
         required: true,
       },
       defaultValue: ['Javascript', 'Typescript', 'Java', 'ReactJS', 'NodeJS', 'Git', 'HTML', 'CSS', 'Styled-components'],
-      description: 'It defines the technologies array.',
+      description: 'It defines the technologies array',
     },
   }
 }
