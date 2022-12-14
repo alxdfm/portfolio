@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           url={"https://www.github.com/alxdfm.png"}
         />
         <Links {...linksDataDefault} />
-        <Technologies techTags={['Javascript', 'Typescript', 'Java', 'ReactJS', 'NodeJS', 'Git', 'HTML', 'CSS', 'Styled-components']} />
+        <Technologies techTags={['Javascript', 'Typescript', 'Java', 'ReactJS', 'NodeJS', 'Git', 'HTML', 'CSS', 'Styled-components', 'NestJs', 'GraphQL', 'Rest']} />
         <Experiences title="Experiências" experiences={[
           {company: 'Descomplica', start: 2022, end: 'Atualmente', role: 'Desenvolvedor Fullstack'}, 
           {company: 'AEL Sistemas', start: 2019, end: 2022, role: 'Técnico em Eletrônica'}
