@@ -14,7 +14,8 @@ import Technologies from "../../components/Technologies";
 
 import { linksDataDefault } from "../../components/Links/Links";
 
-import { ScreenContainer, SideContent } from "./styles";
+import { MainContent, ScreenContainer, SideContent } from "./styles";
+import MyProjects from "../../components/MyProjects";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -36,6 +37,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           {company: 'Escola Técnica Parobé', start: 2017, end: 2019, role: 'Curso Técnico em Eletrônica'}
         ]}/>
       </SideContent>
+      <MainContent>
+        <MyProjects />
+      </MainContent>
     </ScreenContainer>
   </React.StrictMode>
 );

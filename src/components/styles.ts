@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 100%;
   height: auto;
   font-family: ${fontFamily.default};
   color: ${colors.colorFont};

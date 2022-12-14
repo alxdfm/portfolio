@@ -9,6 +9,11 @@ export const ScreenContainer = styled.section`
 export const SideContent = styled.div`
   display: flex;
   flex-direction: column;
-  width: auto;
+  width: 300px;
   gap: 12px;
+`;
+
+export const MainContent = styled.div`
+  width: 620px;
+  margin-left: auto;
 `;
