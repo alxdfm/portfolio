@@ -29,10 +29,11 @@ const MyProjects = (props: Props) => {
 
   const renderProjects = () => {
     return !projectsData ? "Não há projetos por enquanto!" : projectsData.map((project) => (
+      !project.description ? null :
       <ProjectContainer>
         <Name>🗁 {project.name}</Name>
         <Language>{project.language}</Language>
-        <Description>{!project.description ? "Não há descrição!" : project.description }</Description>
+        <Description>{project.description}</Description>
         <Link href={project.html_url} target="_blank">Acesse o repositório!</Link>
       </ProjectContainer>
     ));

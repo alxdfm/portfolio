@@ -27,7 +27,11 @@ export const Projects = styled.div`
   gap: 14px;
   width: 100%;
   height: 200px;
-  overflow-y: hidden;
+  overflow-y: auto;
+  scrollbar-width: 0px;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
 `;
 
 export const ProjectContainer = styled.div`

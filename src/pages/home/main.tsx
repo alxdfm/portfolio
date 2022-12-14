@@ -1,21 +1,15 @@
 import React, { ReactNode } from "react";
 import ReactDOM from "react-dom/client";
-import Experiences from "../../components/Experiences";
 
+import Experiences from "../../components/Experiences";
 import Links from "../../components/Links";
-import Github from "../../components/Links/assets/Github";
-import Linkedin from "../../components/Links/assets/Linkedin";
-import Mail from "../../components/Links/assets/Mail";
-import Mapin from "../../components/Links/assets/Mapin";
-import Twitter from "../../components/Links/assets/Twitter";
-import Work from "../../components/Links/assets/Work";
 import Profile from "../../components/Profile";
 import Technologies from "../../components/Technologies";
+import MyProjects from "../../components/MyProjects";
 
 import { linksDataDefault } from "../../components/Links/Links";
 
 import { MainContent, ScreenContainer, SideContent } from "./styles";
-import MyProjects from "../../components/MyProjects";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
