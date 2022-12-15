@@ -15,5 +15,8 @@ export const SideContent = styled.div`
 `;
 
 export const MainContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   width: 580px;
 `;

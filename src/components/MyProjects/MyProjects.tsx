@@ -28,9 +28,9 @@ const MyProjects = (props: Props) => {
   }, []);
 
   const renderProjects = () => {
-    return !projectsData ? "Não há projetos por enquanto!" : projectsData.map((project) => (
+    return !projectsData ? "Não há projetos por enquanto!" : projectsData.map((project, index) => (
       !project.description ? null :
-      <ProjectContainer>
+      <ProjectContainer key={index}>
         <Name>🗁 {project.name}</Name>
         <Language>{project.language}</Language>
         <Description>{project.description}</Description>
