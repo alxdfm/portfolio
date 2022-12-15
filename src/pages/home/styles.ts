@@ -4,6 +4,7 @@ export const ScreenContainer = styled.section`
   display: flex;
   flex-direction: row;
   width: 980px;
+  gap: 58px;
 `;
 
 export const SideContent = styled.div`
@@ -14,6 +15,5 @@ export const SideContent = styled.div`
 `;
 
 export const MainContent = styled.div`
-  width: 620px;
-  margin-left: auto;
+  width: 580px;
 `;

@@ -28,9 +28,17 @@ export const Projects = styled.div`
   width: 100%;
   height: 200px;
   overflow-y: auto;
-  scrollbar-width: 0px;
+  //firefox
+  scrollbar-width: thin;
+  scrollbar-color: ${colors.colorFont} transparent;
+
+  //chrome
   ::-webkit-scrollbar {
-    width: 0px;
+    width: 4px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid ${colors.colorFont};
   }
 `;
 
@@ -38,7 +46,7 @@ export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 284px;
+  width: 260px;
   height: 72px;
   border: 1px solid ${colors.highlightColor};
   border-radius: 4px;
