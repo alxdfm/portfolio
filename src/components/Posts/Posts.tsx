@@ -29,7 +29,7 @@ const Posts = (props: Props) => {
             </CreatedAt>
           </ContentUser>
         </User>
-        <TitlePost>💡 {post.title}</TitlePost>
+        <TitlePost>&#x1F4A1; {post.title}</TitlePost>
         <Content>{post.content}</Content>
       </Post>
     ));

@@ -31,7 +31,7 @@ const MyProjects = (props: Props) => {
     return !projectsData ? "Não há projetos por enquanto!" : projectsData.map((project, index) => (
       !project.description ? null :
       <ProjectContainer key={index}>
-        <Name>🗁 {project.name}</Name>
+        <Name>&#x1F5C1; {project.name}</Name>
         <Language>{project.language}</Language>
         <Description>{project.description}</Description>
         <Link href={project.html_url} target="_blank">Acesse o repositório!</Link>
