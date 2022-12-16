@@ -22,6 +22,8 @@ const Home = () => {
     return <></>;
   }
 
+  const arrayReverse = [...data.posts].reverse();
+
   return (
     <FullContainer>
       <ScreenContainer>
@@ -85,7 +87,7 @@ const Home = () => {
         </SideContent>
         <MainContent>
           <MyProjects />
-          <Posts posts={data.posts} />
+          <Posts posts={arrayReverse} />
         </MainContent>
       </ScreenContainer>
     </FullContainer>
