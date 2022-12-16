@@ -1,6 +1,6 @@
-import React from "react";
-import Technologies from ".";
-import { Props } from "./Technologies";
+import React from 'react';
+import Technologies from '.';
+import { Props } from './Technologies';
 
 export default {
   title: 'Technologies',
@@ -21,12 +21,20 @@ export default {
         name: 'object',
         required: true,
       },
-      defaultValue: ['Javascript', 'Typescript', 'Java', 'ReactJS', 'NodeJS', 'Git', 'HTML', 'CSS', 'Styled-components'],
+      defaultValue: [
+        'Javascript',
+        'Typescript',
+        'Java',
+        'ReactJS',
+        'NodeJS',
+        'Git',
+        'HTML',
+        'CSS',
+        'Styled-components',
+      ],
       description: 'It defines the technologies array',
     },
-  }
-}
+  },
+};
 
-export const Primary = (args: Props) => (
-  <Technologies {...args}/>
-)
+export const Primary = (args: Props) => <Technologies {...args} />;

@@ -1,40 +1,40 @@
-import React from "react";
-import MyProjects, { Props } from "./MyProjects";
+import React from 'react';
+import MyProjects, { Props } from './MyProjects';
 
 export default {
-  title: "MyProjects",
+  title: 'MyProjects',
   component: MyProjects,
   argTypes: {
     title: {
-      name: "Title",
+      name: 'Title',
       type: {
-        name: "string",
+        name: 'string',
         required: false,
       },
-      defaultValue: "Meus projetos",
-      description: "It defines the title div.",
+      defaultValue: 'Meus projetos',
+      description: 'It defines the title div.',
     },
     projects: {
-      name: "Projects",
+      name: 'Projects',
       type: {
-        name: "object",
+        name: 'object',
         required: true,
       },
       defaultValue: [
         {
-          name: "test",
-          description: "test",
-          html_url: "test",
-          language: "test",
+          name: 'test',
+          description: 'test',
+          html_url: 'test',
+          language: 'test',
         },
         {
-          name: "test2",
-          description: "test2",
-          html_url: "test2",
-          language: "test2",
+          name: 'test2',
+          description: 'test2',
+          html_url: 'test2',
+          language: 'test2',
         },
       ],
-      description: "It defines the MyProjects array",
+      description: 'It defines the MyProjects array',
     },
   },
 };

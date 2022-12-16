@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { colors, fontSize, screenSize } from '../../variables';
 
 type UrlImage = {
-  url: string
-}
+  url: string;
+};
 
-export const Picture = styled.div<UrlImage>(({url}) =>`
+export const Picture = styled.div<UrlImage>(
+  ({ url }) => `
   width: 120px;
   height: 120px;
   border-radius: 124px;
@@ -17,7 +18,8 @@ export const Picture = styled.div<UrlImage>(({url}) =>`
     width: 80px;
     height: 80px;
   }
-`);
+`
+);
 
 export const Name = styled.h1`
   font-weight: 700;

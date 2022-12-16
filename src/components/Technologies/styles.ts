@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors, fontSize, screenSize } from "../../variables";
+import styled from 'styled-components';
+import { colors, fontSize, screenSize } from '../../variables';
 
 export const TechTagsContainer = styled.div`
   display: flex;

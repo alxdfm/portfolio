@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors, fontSize, screenSize } from "../../variables";
+import styled from 'styled-components';
+import { colors, fontSize, screenSize } from '../../variables';
 
 export const Header = styled.div`
   display: flex;
@@ -86,7 +86,7 @@ export const Link = styled.a`
 `;
 
 export const Description = styled.div`
-  height: fit-content; 
+  height: fit-content;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

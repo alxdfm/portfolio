@@ -1,3 +1,3 @@
-import Technologies from "./Technologies";
+import Technologies from './Technologies';
 
 export default Technologies;

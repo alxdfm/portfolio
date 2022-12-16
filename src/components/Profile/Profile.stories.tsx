@@ -1,6 +1,6 @@
-import React from "react";
-import Profile from ".";
-import { Props } from "./Profile";
+import React from 'react';
+import Profile from '.';
+import { Props } from './Profile';
 
 export default {
   title: 'Profile',
@@ -33,9 +33,7 @@ export default {
       defaultValue: 'Full Stack Developer',
       description: 'It defines the name that will come the profile name.',
     },
-  }
-}
+  },
+};
 
-export const Primary = (args: Props) => (
-  <Profile {...args}/>
-)
+export const Primary = (args: Props) => <Profile {...args} />;

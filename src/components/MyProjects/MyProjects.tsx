@@ -1,7 +1,16 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Container, Title } from "../styles";
-import { Description, Header, Language, Link, Name, ProjectContainer, Projects, SeeAll } from "./styles";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Container, Title } from '../styles';
+import {
+  Description,
+  Header,
+  Language,
+  Link,
+  Name,
+  ProjectContainer,
+  Projects,
+  SeeAll,
+} from './styles';
 
 type ProjectType = {
   name: string;
@@ -18,7 +27,7 @@ const MyProjects = (props: Props) => {
   const [projectsData, setProjectsData] = useState<ProjectType[] | null>(null);
 
   useEffect(() => {
-    axios("https://api.github.com/users/alxdfm/repos")
+    axios('https://api.github.com/users/alxdfm/repos')
       .then((response) => {
         setProjectsData(response.data);
       })
@@ -28,21 +37,26 @@ const MyProjects = (props: Props) => {
   }, []);
 
   const renderProjects = () => {
-    return !projectsData ? "Não há projetos por enquanto!" : projectsData.map((project, index) => (
-      !project.description ? null :
-      <ProjectContainer key={index}>
-        <Name>&#x1F4C2; {project.name}</Name>
-        <Language>{project.language}</Language>
-        <Description>{project.description} </Description>
-        <Link href={project.html_url} target="_blank">Acesse o repositório!</Link>
-      </ProjectContainer>
-    ));
-  }
+    return !projectsData
+      ? 'Não há projetos por enquanto!'
+      : projectsData.map((project, index) =>
+          !project.description ? null : (
+            <ProjectContainer key={index}>
+              <Name>&#x1F4C2; {project.name}</Name>
+              <Language>{project.language}</Language>
+              <Description>{project.description} </Description>
+              <Link href={project.html_url} target="_blank">
+                Acesse o repositório!
+              </Link>
+            </ProjectContainer>
+          )
+        );
+  };
 
   return (
     <Container>
       <Header>
-        <Title>{props.title || "Meus projetos"}</Title>
+        <Title>{props.title || 'Meus projetos'}</Title>
         <SeeAll
           href="https://github.com/alxdfm?tab=repositories"
           target="_blank"
@@ -50,9 +64,7 @@ const MyProjects = (props: Props) => {
           Veja no GitHub
         </SeeAll>
       </Header>
-      <Projects>
-        {renderProjects()}
-      </Projects>
+      <Projects>{renderProjects()}</Projects>
     </Container>
   );
 };

@@ -1,6 +1,6 @@
-import { ApolloProvider } from "@apollo/client";
-import Home from "./pages/Home";
-import client from "./libs/apollo";
+import { ApolloProvider } from '@apollo/client';
+import Home from './pages/Home';
+import client from './libs/apollo';
 
 function App() {
   return (

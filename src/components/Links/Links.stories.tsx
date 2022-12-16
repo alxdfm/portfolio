@@ -1,6 +1,6 @@
-import React from "react";
-import Links from ".";
-import { Link } from "./Links";
+import React from 'react';
+import Links from '.';
+import { Link } from './Links';
 
 export default {
   title: 'Links',
@@ -12,11 +12,10 @@ export default {
         name: 'array',
         required: true,
       },
-      description: 'It defines the objects array that will appear. [...,{image: "<ReactNode /",description: "string" url: "string"}]',
+      description:
+        'It defines the objects array that will appear. [...,{image: "<ReactNode /",description: "string" url: "string"}]',
     },
-  }
-}
+  },
+};
 
-export const Primary = (args: Array<Link>) => (
-  <Links {...args}/>
-)
+export const Primary = (args: Array<Link>) => <Links {...args} />;

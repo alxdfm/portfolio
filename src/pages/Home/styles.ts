@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { fontSize, screenSize } from "../../variables";
+import styled from 'styled-components';
+import { fontSize, screenSize } from '../../variables';
 
 export const ScreenContainer = styled.section`
   display: flex;
@@ -14,7 +14,7 @@ export const ScreenContainer = styled.section`
   }
 
   @media only screen and (max-width: ${screenSize.smartL}) {
-    gap: 36px
+    gap: 36px;
   }
 `;
 

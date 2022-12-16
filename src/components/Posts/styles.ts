@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors, fontSize } from "../../variables";
+import styled from 'styled-components';
+import { colors, fontSize } from '../../variables';
 
 export const Header = styled.div`
   display: flex;
@@ -8,10 +8,11 @@ export const Header = styled.div`
 `;
 
 type UrlImage = {
-  url: string
-}
+  url: string;
+};
 
-export const Picture = styled.div<UrlImage>(({url}) =>`
+export const Picture = styled.div<UrlImage>(
+  ({ url }) => `
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -19,7 +20,8 @@ export const Picture = styled.div<UrlImage>(({url}) =>`
   border: 1px solid ${colors.highlightColor};
   background-image: url('${url}');
   background-size: cover;
-`);
+`
+);
 
 export const PostsContainer = styled.div`
   display: flex;
