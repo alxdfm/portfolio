@@ -10,7 +10,16 @@ export const fontFamily = {
 }
 
 export const fontSize = {
+  large: '24px',
   default: '20px',
   small: '16px',
-  large: '24px'
+  ultraSmall: '14px',
+  smallest: '12px',
+}
+
+export const screenSize = {
+  tablet: '1024px',
+  smartL: '868px',
+  smartM: '625px',
+  smartS: '580px',
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fontSize } from "../../variables";
+import { colors, fontSize, screenSize } from "../../variables";
 
 export const Header = styled.div`
   display: flex;
@@ -18,6 +18,11 @@ export const SeeAll = styled.a`
   font-size: ${fontSize.small};
   cursor: pointer;
   text-decoration: none;
+
+  @media only screen and (max-width: 625px) {
+    font-size: ${fontSize.smallest};
+    height: 20px;
+  }
 `;
 
 export const Projects = styled.div`
@@ -52,6 +57,15 @@ export const ProjectContainer = styled.div`
   border-radius: 4px;
   font-size: 12px;
   padding: 8px;
+
+  @media only screen and (max-width: ${screenSize.tablet}) {
+    width: 95%;
+  }
+
+  @media only screen and (max-width: ${screenSize.smartL}) {
+    width: 92%;
+    height: auto;
+  }
 `;
 
 export const Name = styled.div`
@@ -72,13 +86,14 @@ export const Link = styled.a`
 `;
 
 export const Description = styled.div`
-  height: 28px; 
+  height: 30px; 
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   width: 100%;
+  margin-bottom: 4px;
 `;
 
 export const Language = styled.div`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../variables';
+import { colors, screenSize } from '../../variables';
 
 export const LinkContainer = styled.a`
   display: flex;
@@ -8,6 +8,17 @@ export const LinkContainer = styled.a`
   width: 100%;
   height: 20px;
   padding: 10px 0;
+
+  @media only screen and (max-width: ${screenSize.smartM}) {
+    overflow-y: hidden;
+    //firefox
+    scrollbar-width: thin;
+    scrollbar-color: transparent;
+    //chrome
+    ::-webkit-scrollbar {
+      height: 0px;
+    }
+  }
 `;
 
 export const Image = styled.div`
