@@ -1,8 +1,11 @@
 import { useQuery } from '@apollo/client';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import Experiences from '../../components/Experiences';
 import Links from '../../components/Links';
 import { linksDataDefault } from '../../components/Links/Links';
 import MyProjects from '../../components/MyProjects';
+import { ProjectType } from '../../components/MyProjects/MyProjects';
 import Posts from '../../components/Posts';
 import { PostType } from '../../components/Posts/Posts';
 import Profile from '../../components/Profile';
@@ -16,6 +19,18 @@ import {
 } from './styles';
 
 const Home = () => {
+  const [projectsData, setProjectsData] = useState<ProjectType[] | null>(null);
+
+  useEffect(() => {
+    axios('https://api.github.com/users/alxdfm/repos')
+      .then((response) => {
+        setProjectsData(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   const { data } = useQuery<{ posts: PostType[] }>(GET_ALL_POSTS);
 
   if (!data) {
@@ -86,7 +101,10 @@ const Home = () => {
           />
         </SideContent>
         <MainContent>
-          <MyProjects />
+          <MyProjects
+            projects={projectsData}
+            repoLink="https://github.com/alxdfm?tab=repositories"
+          />
           <Posts posts={arrayReverse} />
         </MainContent>
       </ScreenContainer>

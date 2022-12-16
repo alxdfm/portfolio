@@ -12,7 +12,7 @@ import {
   SeeAll,
 } from './styles';
 
-type ProjectType = {
+export type ProjectType = {
   name: string;
   description: string;
   html_url: string;
@@ -21,25 +21,15 @@ type ProjectType = {
 
 export type Props = {
   title?: string;
+  projects: ProjectType[] | null;
+  repoLink: string;
 };
 
 const MyProjects = (props: Props) => {
-  const [projectsData, setProjectsData] = useState<ProjectType[] | null>(null);
-
-  useEffect(() => {
-    axios('https://api.github.com/users/alxdfm/repos')
-      .then((response) => {
-        setProjectsData(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
   const renderProjects = () => {
-    return !projectsData
+    return !props.projects
       ? 'Não há projetos por enquanto!'
-      : projectsData.map((project, index) =>
+      : props.projects.map((project, index) =>
           !project.description ? null : (
             <ProjectContainer key={index}>
               <Name>&#x1F4C2; {project.name}</Name>
@@ -57,10 +47,7 @@ const MyProjects = (props: Props) => {
     <Container>
       <Header>
         <Title>{props.title || 'Meus projetos'}</Title>
-        <SeeAll
-          href="https://github.com/alxdfm?tab=repositories"
-          target="_blank"
-        >
+        <SeeAll href={props.repoLink} target="_blank">
           Veja no GitHub
         </SeeAll>
       </Header>
