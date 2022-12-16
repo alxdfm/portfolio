@@ -9,6 +9,10 @@ export const TechTagsContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 
+  @media only screen and (max-width: ${screenSize.tablet}) {
+    justify-content: space-between;
+  }
+
   @media only screen and (max-width: ${screenSize.smartS}) {
     flex-direction: column;
   }

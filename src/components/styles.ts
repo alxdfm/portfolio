@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 import { fontSize, colors, fontFamily, screenSize } from '../variables';
 
+export const ContainerFull = styled.div`
+  width: 100%;
+  height: auto;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
   font-family: ${fontFamily.default};
   color: ${colors.colorFont};
   border-radius: 20px;

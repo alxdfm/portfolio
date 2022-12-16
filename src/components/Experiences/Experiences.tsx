@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Container } from '../styles';
+import { Title, Container, ContainerFull } from '../styles';
 import {
   Company,
   ContentContainer,
@@ -34,12 +34,14 @@ const Experiences = (props: Props) => {
   };
 
   return (
-    <Container>
-      <Title>{props.title}</Title>
-      <ContentContainer>
-        {renderExperiences(props.experiences)}
-      </ContentContainer>
-    </Container>
+    <ContainerFull>
+      <Container>
+        <Title>{props.title}</Title>
+        <ContentContainer>
+          {renderExperiences(props.experiences)}
+        </ContentContainer>
+      </Container>
+    </ContainerFull>
   );
 };
 

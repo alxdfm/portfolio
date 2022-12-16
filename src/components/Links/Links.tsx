@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { LinkContainer, Image, Description } from './styles';
-import { Container } from '../styles';
+import { Container, ContainerFull } from '../styles';
 import Github from './assets/Github';
 import Linkedin from './assets/Linkedin';
 import Mail from './assets/Mail';
@@ -58,11 +58,13 @@ const Links = (linksData: Array<Link>) => {
   };
 
   return (
-    <Container>
-      {Array.isArray(linksData)
-        ? renderLinks(linksData)
-        : renderLinks(linksDataDefault)}
-    </Container>
+    <ContainerFull>
+      <Container>
+        {Array.isArray(linksData)
+          ? renderLinks(linksData)
+          : renderLinks(linksDataDefault)}
+      </Container>
+    </ContainerFull>
   );
 };
 

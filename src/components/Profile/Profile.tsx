@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../styles';
+import { Container, ContainerFull } from '../styles';
 import { Description, Name, Picture } from './styles';
 
 export type Props = {
@@ -10,11 +10,13 @@ export type Props = {
 
 const Profile = (profileData: Props) => {
   return (
-    <Container>
-      <Picture url={profileData.url} />
-      <Name>{profileData.name}</Name>
-      <Description>{profileData.description}</Description>
-    </Container>
+    <ContainerFull>
+      <Container>
+        <Picture url={profileData.url} />
+        <Name>{profileData.name}</Name>
+        <Description>{profileData.description}</Description>
+      </Container>
+    </ContainerFull>
   );
 };
 

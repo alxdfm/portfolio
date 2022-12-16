@@ -1,6 +1,6 @@
 import React from 'react';
 import { TechTags, TechTagsContainer } from './styles';
-import { Container, Title } from '../styles';
+import { Container, ContainerFull, Title } from '../styles';
 
 export type Props = {
   title?: string;
@@ -15,10 +15,12 @@ const Technologies = (props: Props) => {
   };
 
   return (
-    <Container>
-      <Title>{props.title || 'Tecnologias'}</Title>
-      <TechTagsContainer>{renderTechTags(props.techTags)}</TechTagsContainer>
-    </Container>
+    <ContainerFull>
+      <Container>
+        <Title>{props.title || 'Tecnologias'}</Title>
+        <TechTagsContainer>{renderTechTags(props.techTags)}</TechTagsContainer>
+      </Container>
+    </ContainerFull>
   );
 };
 

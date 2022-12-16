@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Container, Title } from '../styles';
+import { Container, ContainerFull, Title } from '../styles';
 import {
   Description,
   Header,
@@ -44,15 +44,17 @@ const MyProjects = (props: Props) => {
   };
 
   return (
-    <Container>
-      <Header>
-        <Title>{props.title || 'Meus projetos'}</Title>
-        <SeeAll href={props.repoLink} target="_blank">
-          Veja no GitHub
-        </SeeAll>
-      </Header>
-      <Projects>{renderProjects()}</Projects>
-    </Container>
+    <ContainerFull>
+      <Container>
+        <Header>
+          <Title>{props.title || 'Meus projetos'}</Title>
+          <SeeAll href={props.repoLink} target="_blank">
+            Veja no GitHub
+          </SeeAll>
+        </Header>
+        <Projects>{renderProjects()}</Projects>
+      </Container>
+    </ContainerFull>
   );
 };
 

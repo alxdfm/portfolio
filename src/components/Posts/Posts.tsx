@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatDateTime } from '../../utils/formatDateTime';
-import { Container, Title } from '../styles';
+import { Container, ContainerFull, Title } from '../styles';
 import {
   Content,
   Header,
@@ -45,12 +45,14 @@ const Posts = (props: Props) => {
   };
 
   return (
-    <Container>
-      <Header>
-        <Title>{props.title || 'Meus posts'}</Title>
-      </Header>
-      <PostsContainer>{renderPosts()}</PostsContainer>
-    </Container>
+    <ContainerFull>
+      <Container>
+        <Header>
+          <Title>{props.title || 'Meus posts'}</Title>
+        </Header>
+        <PostsContainer>{renderPosts()}</PostsContainer>
+      </Container>
+    </ContainerFull>
   );
 };
 
