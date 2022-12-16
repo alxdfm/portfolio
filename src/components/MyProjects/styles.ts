@@ -86,7 +86,7 @@ export const Link = styled.a`
 `;
 
 export const Description = styled.div`
-  height: 30px; 
+  height: fit-content; 
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
