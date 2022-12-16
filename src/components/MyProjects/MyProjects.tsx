@@ -33,7 +33,7 @@ const MyProjects = (props: Props) => {
       <ProjectContainer key={index}>
         <Name>&#x1F4C2; {project.name}</Name>
         <Language>{project.language}</Language>
-        <Description>{project.description}</Description>
+        <Description>{project.description} </Description>
         <Link href={project.html_url} target="_blank">Acesse o repositório!</Link>
       </ProjectContainer>
     ));
