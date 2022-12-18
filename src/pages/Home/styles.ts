@@ -128,17 +128,88 @@ export const ThemeToggle = styled.button<Props>`
   font-size: 9px;
 
   :active {
-    width: 66px;
-    height: 18px;
+    transform: translate(-0.5px, -0.5px);
+    width: 64.5px;
+    height: 16.5px;
+  }
+
+  @keyframes anim {
+    0% {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(43, 43, 43, 1) 10%,
+        rgba(147, 147, 147, 1) 25%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    25% {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(43, 43, 43, 1) 20%,
+        rgba(147, 147, 147, 1) 35%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    50% {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(43, 43, 43, 1) 45%,
+        rgba(147, 147, 147, 1) 60%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    75% {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(43, 43, 43, 1) 65%,
+        rgba(147, 147, 147, 1) 80%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    100% {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(43, 43, 43, 1) 74%,
+        rgba(147, 147, 147, 1) 90%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
   }
 
   ${(props) =>
     props.isLightTheme
       ? `
-        background-color: #000;
-        color: #dde;
+        background: #fff;
+        color: #000;
+        :hover {
+          animation: anim 0.2s linear ;
+          background: #000;
+          color: #dde;
+        }
       `
-      : null}
+      : `
+        background: #000;
+        color: #dde;
+        :hover {
+          animation: anim 0.2s linear reverse;
+          background: #fff;
+          color: #000;
+        }
+      `}
 
   @media only screen and (max-width: ${screenSize.smartS}) {
     width: 58px;
