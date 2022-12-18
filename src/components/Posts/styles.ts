@@ -11,17 +11,15 @@ type UrlImage = {
   url: string;
 };
 
-export const Picture = styled.div<UrlImage>(
-  ({ url }) => `
+export const Picture = styled.div<UrlImage>`
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin-right: 8px;
   border: 1px solid ${colors.highlightColor};
-  background-image: url('${url}');
+  background-image: url(${(props) => props.url});
   background-size: cover;
-`
-);
+`;
 
 export const PostsContainer = styled.div`
   display: flex;

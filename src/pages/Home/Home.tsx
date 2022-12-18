@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import Experiences from '../../components/Experiences';
 import Links from '../../components/Links';
 import { linksDataDefault } from '../../components/Links/Links';
@@ -16,10 +16,12 @@ import {
   SideContent,
   MainContent,
   FullContainer,
+  ThemeToggle,
 } from './styles';
 
 const Home = () => {
   const [projectsData, setProjectsData] = useState<ProjectType[] | null>(null);
+  const [lightTheme, setLightTheme] = useState<boolean>(false);
 
   useEffect(() => {
     axios('https://api.github.com/users/alxdfm/repos')
@@ -39,10 +41,22 @@ const Home = () => {
 
   const arrayReverse = [...data.posts].reverse();
 
+  const handleOnClickCheckbox = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    setLightTheme(!lightTheme);
+  };
+
   return (
-    <FullContainer>
+    <FullContainer isLightTheme={lightTheme}>
       <ScreenContainer>
         <SideContent>
+          <ThemeToggle
+            isLightTheme={lightTheme}
+            onClick={(e) => handleOnClickCheckbox(e)}
+          >
+            {lightTheme ? 'Dark mode' : 'Light mode'}
+          </ThemeToggle>
           <Profile
             name={'Alexandre Machado'}
             description={'Full Stack Developer'}
