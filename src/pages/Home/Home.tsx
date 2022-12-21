@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 import axios from 'axios';
 import { ReactNode, useEffect, useState } from 'react';
 import Experiences from '../../components/Experiences';
+import { Experience } from '../../components/Experiences/Experiences';
 import Links from '../../components/Links';
 import { linksDataDefault } from '../../components/Links/Links';
 import MyProjects from '../../components/MyProjects';
@@ -10,7 +11,7 @@ import Posts from '../../components/Posts';
 import { PostType } from '../../components/Posts/Posts';
 import Profile from '../../components/Profile';
 import Technologies from '../../components/Technologies';
-import { GET_ALL_POSTS } from '../../graphql/queries/get-all-posts';
+import { GET_ALL_DATA } from '../../graphql/queries/get-all-data';
 import {
   ScreenContainer,
   SideContent,
@@ -33,13 +34,31 @@ const Home = () => {
       });
   }, []);
 
-  const { data } = useQuery<{ posts: PostType[] }>(GET_ALL_POSTS);
+  const { data } =
+    useQuery<{
+      posts: PostType[];
+      educations: Experience[];
+      experiences: Experience[];
+      technologies: { techTags: string }[];
+    }>(GET_ALL_DATA);
 
   if (!data) {
     return <></>;
   }
 
-  const arrayReverse = [...data.posts].reverse();
+  const postsReverse = [...data.posts].reverse();
+
+  const experiencesReverse = [...data.experiences].reverse();
+
+  const educationsReverse = [...data.educations].reverse();
+
+  const handleTechnologies = () => {
+    const techArray: string[] = [];
+    data.technologies.forEach((tech) => {
+      return techArray.push(tech.techTags);
+    });
+    return techArray.reverse();
+  };
 
   const handleOnClickCheckbox = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -63,63 +82,16 @@ const Home = () => {
             url={'https://www.github.com/alxdfm.png'}
           />
           <Links {...linksDataDefault} />
-          <Technologies
-            techTags={[
-              'Javascript',
-              'Typescript',
-              'Java',
-              'ReactJS',
-              'NodeJS',
-              'Git',
-              'HTML',
-              'CSS',
-              'Styled-components',
-              'NestJs',
-              'GraphQL',
-              'Rest',
-            ]}
-          />
-          <Experiences
-            title="Experiências"
-            experiences={[
-              {
-                company: 'Descomplica',
-                start: 2022,
-                end: 'Atualmente',
-                role: 'Desenvolvedor Fullstack',
-              },
-              {
-                company: 'AEL Sistemas',
-                start: 2019,
-                end: 2022,
-                role: 'Técnico em Eletrônica',
-              },
-            ]}
-          />
-          <Experiences
-            title="Educação"
-            experiences={[
-              {
-                company: 'Faculdade UniRitter',
-                start: 2020,
-                end: 2022,
-                role: 'Análise e Desenvolvimento de Sistemas',
-              },
-              {
-                company: 'Escola Técnica Parobé',
-                start: 2017,
-                end: 2019,
-                role: 'Curso Técnico em Eletrônica',
-              },
-            ]}
-          />
+          <Technologies techTags={handleTechnologies()} />
+          <Experiences title="Experiências" experiences={experiencesReverse} />
+          <Experiences title="Educação" experiences={educationsReverse} />
         </SideContent>
         <MainContent>
           <MyProjects
             projects={projectsData}
             repoLink="https://github.com/alxdfm?tab=repositories"
           />
-          <Posts posts={arrayReverse} />
+          <Posts posts={postsReverse} />
         </MainContent>
       </ScreenContainer>
     </FullContainer>

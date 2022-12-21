@@ -10,8 +10,8 @@ import {
 
 export type Experience = {
   company: string;
-  start: number;
-  end: number | 'Atualmente';
+  start: string;
+  end: string | 'Atualmente';
   role: string;
 };
 
