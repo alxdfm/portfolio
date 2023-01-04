@@ -13,6 +13,7 @@ Projeto rodando em https://alxdfm.github.io/portfolio/ <br>
 - GraphQL;
 - Apollo-client;
 - axios;
+- [Hygraph](https://app.hygraph.com/36a67e3292ab471dba4da10553980870/master/graphiql);
 
 ## Rodando o projeto:
 
