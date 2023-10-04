@@ -22,8 +22,8 @@ export const linksDataDefault: Array<Link> = [
   },
   {
     image: <Work />,
-    description: 'Descomplica',
-    url: 'https://descomplica.com.br/',
+    description: 'Vixting',
+    url: 'https://vixting.com.br/',
   },
   {
     image: <Github />,
